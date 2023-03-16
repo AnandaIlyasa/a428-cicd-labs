@@ -20,7 +20,9 @@ pipeline {
             }
         }
 	stage('Approval') {
+	    steps {
 		input message: 'Lanjutkan ke tahap Deploy?'
+	    }
 	}
         stage('Deploy') {
             steps {
